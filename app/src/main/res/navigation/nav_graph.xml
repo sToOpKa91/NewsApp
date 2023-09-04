@@ -22,7 +22,11 @@
         android:id="@+id/detailsFragment"
         android:name="com.sto_opka91.newsapp.ui.details.DetailsFragment"
         android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="article"
+            app:argType="com.sto_opka91.newsapp.models.Article" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.sto_opka91.newsapp.ui.favorite.FavoriteFragment"

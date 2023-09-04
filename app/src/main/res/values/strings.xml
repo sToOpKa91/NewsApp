@@ -5,4 +5,6 @@
     <string name="popular_news">Popular News</string>
     <string name="search">Search</string>
     <string name="enter_a_request">Enter a request</string>
+    <string name="description">Description</string>
+    <string name="go_to_resource">Go to resource</string>
 </resources>

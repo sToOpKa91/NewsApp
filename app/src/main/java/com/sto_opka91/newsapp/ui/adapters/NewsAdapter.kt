@@ -42,10 +42,15 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
             val ivArticleImage = findViewById<ImageView>(R.id.ivArticleImage)
             val tvArticleDate = findViewById<TextView>(R.id.tvArticleDate)
             Glide.with(this).load(article.urlToImage).into(ivArticleImage)
+            Log.d("UrlIm", "Url: ${article}")
             ivArticleImage.clipToOutline = true
             tvArticleTitle.text = article.title
             tvArticleDate.text = article.publishedAt
+            setOnClickListener {
+                onItemClickListener?.let{it(article)}
+            }
         }
+
     }
     private var onItemClickListener: ((Article) -> Unit)? = null
     fun setOnClickListener (listener : (Article) -> Unit){
